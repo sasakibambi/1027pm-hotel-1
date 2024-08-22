@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <title>Bord de mer HOTEL | Reservation</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header-box">
+            <h1 class="logo-img"><a href="index.html"><img class="logo" src="image/new-logo.png" alt="ロゴ"></a></h1>
+            <nav class="nav">
+                <div class="list">
+                    <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="concept.html">CONCEPT</a></li>
+                        <li><a href="news.php">NEWS</a></li>
+                        <li><a href="stay.html">STAY</a></li>
+                        <li><a href="restaurant.html">RESTAURANT</a></li>
+                        <li><a href="access.html">ACCESS</a></li>
+                        <li><a href="reservation.html">RESERVATION</a></li>
+                        <li><a href="inquiry.html">INQUIRY</a></li>
+                    </ul>
+                    </nav>
+                </div>
+            </nav>
+
+            <!-- ハンバーガーメニュー -->
+                    <button class="navbtn"
+            onClick="document.querySelector('html').classList.toggle('open')">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                <span class="sr-only">Menu</span>
+            </button>
+        </header>
+            
+            <button class="navbtn hamburger hamburger--stand"
+            onClick="document.querySelector('html').classList.toggle('open');
+                    document.querySelector('.navbtn').classList.toggle('is-active');">
+                <span class="hamburger-box"></span>
+                    <span class="hamburger-inner"></span>
+            </button>
+        </header>
+
+    <main class="page-main">
+        <section class="image-container">
+                <!-- <img class="reservationtop-img" src="/image/reservation top.jpg" alt="#"> -->
+        </section>
+
+        <div class="reserve">
+            <h2>ご予約フォーム<span class="smallfont">-Coucher de Soleil-</span></h2>
+        </div>
+        <div>
+            <!-- <img src="/image/room1.jpeg" alt="room1"> -->
+        </div>
+        <article class="plan_info">
+            <div class="text-container">
+                <p>お客様情報をご入力ください</p>
+                <form action="reservation_check.php" method="post">
+                    <div class="form-content">
+                        <div class="form-label">
+                            <label for="in_date">チェックイン日</label>
+                            <span class="required">※必須</span>
+                        </div>
+                        <input class="fromDate" name="in_date" id="in_date" value="選択してください" readonly required>
+                    </div>  
+                    <div class="form-content">
+                        <div class="form-label">
+                            <label for="out_date">チェックアウト日</label>
+                            <span class="required">※必須</span>
+                        </div>
+                        <input class="toDate" name="out_date" id="out_date" value="選択してください" readonly required>
+                    </div>
+                    <div class="form-content">
+                        <div class="form-label">
+                            <label for="number">ご宿泊人数（定員：４名）</span></label>
+                            <span class="required">※必須</span>
+                        </div>
+                        <input type="number" class="calc" id="number" name="number" max="4" min="0" value="0">人
+                    </div>
+                    <div class="form-content">
+                        <div class="form-label">
+                            <label for="room_id">部屋タイプ</span></label>
+                            <input type="hidden" name="room_id" value="1">
+                            <div id="room_id">Coucher de Soleil</div>
+                        </div>
+                    </div>
+                    <div class="form-content">
+                        <div class="form-label">
+                            <label for="name">お名前</label>
+                            <span class="required">※必須</span>
+                        </div>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="form-content">
+                        <div class="form-label">
+                            <label for="address">メールアドレス</label>
+                            <span class="required">※必須</span>
+                        </div>
+                        <input type="email" name="mail" id="mail" required>
+                    </div>
+                    <div class="form-content">
+                        <div class="form-label">
+                            <label for="tel">電話番号</label>
+                            <span class="required">※必須</span>
+                        </div>
+                        <input type="tel" name="tel" id="tel" required maxlength="11">
+                    </div>
+                    
+                    <div>
+                        <p class="item-total">合計金額<span id="total">0</span>円(税込)</p>
+                        <div class="room_btn selected_btn">
+                            <input type="submit" value="確認する">
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </article>
+    </main>
+   
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="sns-icon-container">
+                <a class="sns-icon" href="#"><img src="image/sns_icon/FB.png" alt="facebook"></a>
+                <a class="sns-icon" href="#"><img src="image/sns_icon/IG.png" alt="instagram"></a>
+                <a class="sns-icon" href="#"><img src="image/sns_icon/TW.png" alt="twitter"></a>
+            </div>
+        <p class="copyright"><small>&copy;Bord de mer HOTEL All Rights Reserved</small></p>
+        </div>
+    </footer>
+    </div>
+<script src="js/price_calc.js"></script>
+<script src="https://unpkg.com/js-datepicker"></script>
+<script src="js/js-datepicker-config.js"></script>
+</body>
+</html>

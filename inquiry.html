@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bord de mer HOTEL | Inquiry</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header-box">
+            <div class="logo-img"><a href="index.html"><img class="logo" src="image/new-logo.png" alt="ロゴ"></a></div>
+            <nav class="nav">
+                <div class="list">
+                    <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="concept.html">CONCEPT</a></li>
+                        <li><a href="news.php">NEWS</a></li>
+                        <li><a href="stay.html">STAY</a></li>
+                        <li><a href="restaurant.html">RESTAURANT</a></li>
+                        <li><a href="access.html">ACCESS</a></li>
+                        <li><a href="reservation.html">RESERVATION</a></li>
+                        <li><a href="inquiry.html">INQUIRY</a></li>
+                    </ul>
+                    </nav>
+                </div>
+            </nav>
+        <!-- ハンバーガーメニュー -->
+        <button class="navbtn"
+            onClick="document.querySelector('html').classList.toggle('open')">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        <span class="sr-only">Menu</span>
+        </button>
+        </header>
+
+    <main class="page-main">
+        <section class="image-container" id="inquiry-top">
+            <h2> 
+                <!-- <p class="text1">Bord de Mer</p>
+                <p class="text2">海辺の隠れ家で極上のリゾート体験を</p> -->
+                <img class="pagetop-img" src="image/inquiry.jpg" alt="#">
+            </h2>
+        </section>
+        <div class="text-container">
+            <h2>お問い合わせフォーム</h2>   
+            <p>以下の項目にご入力の上、確認ボタンを押してください。</p>
+                <ul>
+                    <li>※　は入力必須項目です。</li>
+                    <li>本フォームへのお問い合わせは、平日9:00 ～ 17:00 にご返信申し上げます。土日祝日は返信いたしておりませんので予めご了承ください。</li>
+                    <li>ご回答までに1 ～ 2 営業日お時間を頂戴する場合がございますので、ご利用日直前の変更や確認、回答をお急ぎの場合は、お電話にてご連絡いただきますようお願い申し上げます。</li>
+                </ul>
+        </div>
+        <div class="text-container">
+            <p>お客様情報をご入力ください</p>
+            <form action="confirm.php" method="post">
+                <div class="form-content">
+                    <div class="form-label">
+                        <label for="name">お名前　</label>
+                        <span class="required">※必須</span>
+                    </div>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="form-content">
+                    <div class="form-label">
+                        <label for="mail">メールアドレス　</label>
+                        <span class="required">※必須</span>
+                    </div>
+                    <input type="email" name="mail" id="mail" required>
+                </div>
+                <div class="form-content">
+                    <div class="form-label">お問い合わせの種類　<span class="required">※必須</span>
+                    </div>
+                    <label><input type="radio" name="kind" value="1" checked>ホテルについて</label>
+                    <label><input type="radio" name="kind" value="2" >予約について</label>
+                    <label><input type="radio" name="kind" value="3" >その他</label>
+                </div>
+                <div class="form-content">
+                    <div class="form-label">
+                        <label for="comment">お問い合わせ内容　</label><span class="required">※必須</span>
+                    </div>
+                    <textarea name="comment" id="comment" required></textarea>
+                </div>
+                <input type="submit" value="確認する">
+            </form>
+        </div>
+    </main>
+   
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="sns-icon-container">
+                <a class="sns-icon" href="#"><img src="image/sns_icon/FB.png" alt="facebook"></a>
+                <a class="sns-icon" href="#"><img src="image/sns_icon/IG.png" alt="instagram"></a>
+                <a class="sns-icon" href="#"><img src="image/sns_icon/TW.png" alt="twitter"></a>
+            </div>
+        <p class="copyright"><small>&copy;Bord de mer HOTEL All Rights Reserved</small></p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
